@@ -1,0 +1,9 @@
+Derivadas (Reglas Básicas)	✅ Hecho	Suma, Producto, Cadena simple.
+Derivadas (Complejas)	❌ Por hacer	Logarítmicas, implícitas, trigonométricas inversas.
+Integrales Indefinidas	❌ Por hacer	Inmediatas y por Sustitución (Cambio de variable).
+Integrales (Por Partes)	❌ Por hacer	Clásico "un día vi una vaca...".
+Límites / Indeterminaciones	❌ Por hacer	L'Hôpital (muy fácil con SymPy).
+
+
+
+Operaciones con Matrices❌ Por hacerSuma, producto, traspuesta.Determinantes e Inversas❌ Por hacerCálculo de matriz inversa $A^{-1}$.Sistemas de Ecuaciones❌ Por hacerDiscusión de sistemas con parámetros ($k$) (Rouché-Fröbenius). Este es vital para EBAU.

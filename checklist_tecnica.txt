@@ -1,0 +1,9 @@
+Componente,Estado,Detalle
+Estructura de Carpetas,✅ Hecho,"modules/, assets/, app.py organizados."
+Dependencias,✅ Hecho,"requirements.txt creado (streamlit, sympy, openai)."
+Motor Matemático (math_engine.py),✅ Hecho,Genera derivadas aleatorias y las resuelve con SymPy.
+Interfaz Básica (app.py),⏳ Pendiente probar,"El código está escrito (te lo pasé antes), falta ejecutar streamlit run y ver que carga."
+Conexión IA (ai_tutor.py),❌ Por hacer,Falta crear el script que envíe el problema a OpenAI.
+Chat Interactivo,❌ Por hacer,Falta integrar la ventana de chat en el Frontend.
+Base de Datos (Usuarios/Créditos),❌ Por hacer,Necesaria para contar cuántas preguntas hace cada usuario (SQLite).
+Login / Autenticación,❌ Por hacer,Pantalla de entrada para usuarios.

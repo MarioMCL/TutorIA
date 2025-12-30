@@ -78,13 +78,28 @@ creditos_visuales = user['creditos']
 
 st.title("🎓 Tutor de Análisis")
 
-# Barra Superior de Estado
-col1, col2 = st.columns([3,1])
+# --- BARRA SUPERIOR DE ESTADO (MODIFICADA) ---
+col1, col2, col3 = st.columns([3, 2, 1]) # Creamos 3 huecos: Nombre, Créditos, Botón
+
 col1.caption(f"👤 Estudiante: **{user['email']}**")
+
+# Mostramos los créditos (Verde si hay, Rojo si no)
 if creditos_visuales > 0:
     col2.success(f"🪙 Créditos: {creditos_visuales}")
 else:
     col2.error(f"🪙 Créditos: {creditos_visuales}")
+
+# Botón para refrescar saldo manualmente
+if col3.button("🔄", help="Actualizar saldo si has pagado"):
+    # 1. Consultamos el saldo real en la Nube
+    datos = db.supabase.table("perfiles_usuarios").select("creditos").eq("id", user['id']).execute()
+    
+    if datos.data:
+        nuevo_saldo = datos.data[0]['creditos']
+        # 2. Actualizamos la memoria de la App
+        st.session_state['usuario']['creditos'] = nuevo_saldo
+        st.toast("✅ Saldo actualizado") # Mensaje flotante bonito
+        st.rerun() # Recargamos la interfaz
 
 # Inicialización de Memoria del Ejercicio
 if 'ejercicio' not in st.session_state:
